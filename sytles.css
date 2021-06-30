@@ -6,11 +6,36 @@
 
 body {
   height: 100vh;
+  display: flex;
   background-color: lightgray;
 }
 
-img {
-  width: 200px;
+.memory-game {
+  width: 640px;
+  height: 640px;  
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid lime;
+}
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(25% - 10px);
+  position: relative;
+  margin: 5px;
+  transform: scale(1);
+}
+
+.memory-card:active {
+  transform: scale(.97);
+  transition: transform .2s;
+}
+
+.front-face, .back-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 2px solid black;
 }
