@@ -7,7 +7,7 @@ let firstCard, secondCard
 
 function flipCard() {
   if(lockBoard) return; // locking board so cards can flip back if they do not match without letting you click on another card
-  if(this === firstCard) return //
+  if(this === firstCard) return 
 
   this.classList.toggle('flip');
 

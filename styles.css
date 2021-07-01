@@ -5,20 +5,33 @@
 }
 
 body {
+  background-color: rgb(199, 206, 211);  
   display: flex;
-  background-color: lightgray;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Patrick Hand', cursive;
+  height: 100vh;
+}
+
+.jumbotron {
+  display: flex;
+  margin: 20px auto;
+  align-items: center;
 }
 
 .title {
-  display: flex;
-  margin: auto;
+  font-size: 45px;
+}
+
+.shiba {
+  margin: 0 10px;
 }
 
 .reset-button {
   background-color: rgb(12, 213, 231);
   display: flex;
-  margin: auto;
+  margin: 20px auto;
   padding: 10px 15px;
   font-size: 20px;
   border: 2px solid black;
@@ -30,7 +43,7 @@ body {
 }
 
 .memory-game {
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
