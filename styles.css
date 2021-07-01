@@ -11,8 +11,7 @@ body {
 }
 
 .memory-game {
-  width: 600px;
-  height: 450px;  
+  width: 600px; 
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -21,13 +20,21 @@ body {
 
 .memory-card {
   width: calc(25% - 10px);
-  height: calc(33.33% - 10px);
   position: relative;
   margin: 5px;
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
 }
+
+.memory-card:after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+/* https://www.sodawebmedia.com/blog/create-responsive-square-css/
+By making use of the padding-top, we can create a perfect square, 
+also took away memory-game and memory-card height away to make responsive */
 
 .memory-card:active {
   transform: scale(.97);
