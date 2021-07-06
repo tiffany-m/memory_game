@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* padding and border are included in the width and height */
 }
 
 body {
@@ -55,6 +56,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   perspective: 1000px;
+  /* part1: gives depth to elements for 3D effect */
 }
  @media (max-width: 600px) {
   .memory-game {
@@ -88,6 +90,7 @@ body {
   margin: 5px;
   transform: scale(1);
   transform-style: preserve-3d;
+  /* part2: inserts memory card element inside 3D space which is create in the memory game container */
   transition: transform .5s;
 }
  @media (max-width: 601px) {
@@ -125,5 +128,5 @@ also took away memory-game and memory-card height away to make responsive */
 /* The backface-visibility property defines whether or not the back face of an element should be visible when facing the user.  The back face of an element is a mirror image of the front face being displayed. */
 
 .front-face {
-  transform: rotateY(180deg)
+  transform: rotateY(180deg);
 }

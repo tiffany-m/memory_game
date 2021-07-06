@@ -9,12 +9,12 @@ function flipCard() {
   if(lockBoard) return; // locking board so cards can flip back if they do not match without letting you click on another card
   if(this === firstCard) return 
 
-  this.classList.toggle('flip');
+  this.classList.toggle('flip'); // this keyword represents the element that fired the event
 
   if (!hasFlippedCard) {
     //first click
     hasFlippedCard = true;
-    firstCard = this;
+    firstCard = this; 
   } else {
     //second click
     hasFlippedCard = false;
@@ -26,7 +26,7 @@ function flipCard() {
 
 function checkForMatch() {
   //do cards match?
-  if (firstCard.dataset.image === secondCard.dataset.image) {  //dataset lets you check data-* attribute, in this case the data-image
+  if (firstCard.dataset.image === secondCard.dataset.image) {  // dataset lets you check data-* attribute, in this case the data-image
     //its a match
     disableCards()
   } else {
@@ -53,7 +53,7 @@ function unFlipCards() {
   }, 1500);
 }
 
-function resetBoard() {
+function resetBoard() { // after each round of flipped cards must reset value to null
   hasFlippedCard = false
   lockBoard = false
 
@@ -64,20 +64,18 @@ function resetBoard() {
 // wrapping function in () followed by () makes it an immediately invoked function expression, so it will be executed right after its definition
 (function shuffle() {
   cards.forEach(card => {
-    let randomPos = Math.floor(Math.random() * 14) // generates random numbers from 0 to 11
-    card.style.order = randomPos // order is flex box property, each flex item defaults to 0, giving each item new number sorts them in ascending order
+    let randomOrderNum = Math.floor(Math.random() * 14) // generates random numbers from 0 to 13
+    card.style.order = randomOrderNum // order is flex box property, each flex item defaults to 0, giving each item new number sorts them in ascending order
   })
 })()
 
 cards.forEach(card => card.addEventListener('click', flipCard))
 
-
-
-
 function resetGame() {
   cards.forEach(card => card.classList.remove('flip'))
-  shuffle()
+  resetBoard()
   cards.forEach((card) => card.addEventListener('click', flipCard))
+  shuffle()
 }
 
 resetButton.addEventListener('click', resetGame)
