@@ -1,5 +1,6 @@
 const cards = document.querySelectorAll('.memory-card')
 const resetButton = document.querySelector('.reset-button')
+const timeEl = document.getElementById('time');
 
 let hasFlippedCard = false
 let lockBoard = false
