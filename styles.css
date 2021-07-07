@@ -26,7 +26,8 @@ body {
 
 /* Title Screen ------------------------------------------------------------------------------ */
 .jumbotron {
-  margin: auto;
+  margin: 0 auto;
+  /* changed "margin: auto" to 0 for top bottom, auto is not a defined value, thats why it can't be decreased to zero */
   text-align: center;
 }
 
@@ -37,19 +38,20 @@ body {
  @media (max-width: 575px) {
   .title {
     font-size: 40px;
+    margin: 0 3px;
   } 
 }
 
 .shiba {
-  margin: 0 10px;
+  margin-bottom: 20px;
 }
 
-/* Buttons ----------------------------------------------------------------------------------- */
+/* Buttons/Functions ----------------------------------------------------------------------------------- */
 #start {
-  margin: 20px auto;
+  margin: 25px;
 }
 #reset {
-  margin: 0 2px;
+  margin: 5px;
 }
 #start, #reset {
   background-color: rgb(12, 213, 231);
@@ -65,6 +67,32 @@ body {
   background-color: rgb(11, 191, 207);
 }
 
+.functions {
+  display: flex;
+  margin-top: 20px;
+}
+ @media (max-width: 575px) {
+  .functions {
+    flex-direction: column;
+  }
+}
+
+#winTime, #time {
+  padding: 8px 15px;
+  font-size: 25px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family: 'Patrick Hand', cursive;
+  font-weight: bold;
+  margin: 5px;
+}
+#winTime {
+  background-color: #DA9AFA;
+}
+#time {
+  background-color: #13FBDC;
+}
+
 /* Game Board Screen ---------------------------------------------------------------------------- */
 .memory-game {
   display: flex;
@@ -75,7 +103,7 @@ body {
 }
  @media (max-width: 575px) {
   .memory-game {
-    width: 95%;
+    width: 98%;
   } 
 }
  @media (min-width: 1200px) {
@@ -127,25 +155,3 @@ also took away memory-game and memory-card height away to make responsive */
   transform: rotateY(180deg);
 }
 
-.functions {
-  display: flex;
-  margin-top: 20px;
-}
-
-#score, #time {
-  padding: 8px 15px;
-  font-size: 25px;
-  border: 2px solid black;
-  border-radius: 5px;
-  font-family: 'Patrick Hand', cursive;
-  font-weight: bold;
-  margin: 0 2px;
-}
-
-#score {
-  background-color: #DA9AFA;
-}
-
-#time {
-  background-color: #13FBDC;
-}
