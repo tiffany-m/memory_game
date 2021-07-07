@@ -1,5 +1,5 @@
 const cards = document.querySelectorAll('.memory-card')
-const resetButton = document.getElementById('reset')
+const resetBtn = document.getElementById('reset')
 const timeEl = document.getElementById('time');
 const scoreEl = document.getElementById('score')
 const screens = document.querySelectorAll('.screen')
@@ -87,5 +87,5 @@ function resetGame() {
   cards.forEach((card) => card.addEventListener('click', flipCard))
 }
 
-resetButton.addEventListener('click', resetGame)
+resetBtn.addEventListener('click', resetGame)
 
