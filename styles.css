@@ -34,6 +34,11 @@ body {
   font-size: 45px;
   font-family: 'Patrick Hand', cursive;
 }
+ @media (max-width: 575px) {
+  .title {
+    font-size: 40px;
+  } 
+}
 
 .shiba {
   margin: 0 10px;
@@ -44,7 +49,7 @@ body {
   margin: 20px auto;
 }
 #reset {
-  margin: 0 20px;
+  margin: 0 2px;
 }
 #start, #reset {
   background-color: rgb(12, 213, 231);
@@ -65,7 +70,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
+  justify-content: center;
   /* part1: gives depth to elements for 3D effect */
+}
+ @media (max-width: 575px) {
+  .memory-game {
+    width: 95%;
+  } 
 }
  @media (min-width: 1200px) {
   .memory-game {
@@ -128,7 +139,7 @@ also took away memory-game and memory-card height away to make responsive */
   border-radius: 5px;
   font-family: 'Patrick Hand', cursive;
   font-weight: bold;
-  margin: 0 20px;
+  margin: 0 2px;
 }
 
 #score {
