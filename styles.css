@@ -7,15 +7,27 @@
 
 body {
   background-color: rgb(199, 206, 211);  
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.screen {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
+  transition: margin 0.5s ease-out;
+}
+
+.screen.up {
+  margin-top: -100vh;
 }
 
 .jumbotron {
-  display: flex;
-  margin: 20px auto;
-  align-items: center;
+  margin: auto;
+  text-align: center;
 }
 
 .title {
@@ -33,7 +45,7 @@ body {
   margin: 0 10px;
 }
 
-.reset-button {
+#reset, #start {
   background-color: rgb(12, 213, 231);
   display: flex;
   margin: 20px auto;
@@ -45,20 +57,18 @@ body {
   font-weight: bold;
 }
 
-.reset-button:active {
+#reset:active, #start {
   transform: scale(.97);
   background-color: rgb(11, 191, 207);
 }
 
 .memory-game {
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   perspective: 1000px;
   /* part1: gives depth to elements for 3D effect */
 }
- @media (max-width: 600px) {
+ /* @media (max-width: 600px) {
   .memory-game {
     width: 94%;
   } 
@@ -77,10 +87,10 @@ body {
   .memory-game {
     width: 40%;
   } 
-}
+} */
  @media (min-width: 1200px) {
   .memory-game {
-    width: 35%;
+    width: 30%;
   } 
 }
 
