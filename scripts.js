@@ -11,6 +11,15 @@ let firstCard, secondCard
 let seconds = 0
 let sum = 0
 
+    function set100vhVar() {
+        // If less than most tablets, set CSS var to window height.
+        let value = "100vh"
+        if (this.winWidth <= 1024) {
+            value = `${window.innerHeight}px`
+        }
+        document.documentElement.style.setProperty("--real100vh", value)
+    }
+
 // start button transitions to next screen and starts game
 startBtn.addEventListener('click', () => {
   screens[0].classList.add('up')
