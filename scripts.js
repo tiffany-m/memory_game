@@ -11,13 +11,6 @@ let firstCard, secondCard
 let seconds = 0
 let sum = 0
 
-const appHeight = () => {
-  const doc = document.documentElement;
-  doc.style.setProperty('--app-height', `${window.innerHeight}px`);
-};
-window.addEventListener('resize', appHeight);
-appHeight();
-
 // start button transitions to next screen and starts game
 startBtn.addEventListener('click', () => {
   screens[0].classList.add('up')

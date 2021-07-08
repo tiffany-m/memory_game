@@ -4,16 +4,11 @@
   box-sizing: border-box;
 }
 
-:root {
-   --app-height: 100%;
-}
-
 body {
   background-color: rgb(199, 206, 211);  
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    height: var(--app-height);
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
 }
 
 .screen {
