@@ -4,14 +4,9 @@
   box-sizing: border-box;
 }
 
-/* CSS  */
-:root {
-    --real100vh: 100vh;
-}
-
 body {
   background-color: rgb(199, 206, 211);  
-  height: var(--real100vh);
+  height: 100%;
   overflow: hidden;
 }
 
@@ -20,7 +15,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: var(--real100vh);
+  height: 100vh;
   transition: margin .5s ease-out;
 }
 .screen.up {
