@@ -6,8 +6,20 @@
 
 body {
   background-color: rgb(199, 206, 211);  
-  height: 100vh;
+  /* height: 100vh; */
   overflow: hidden;
+}
+
+html {
+  height: -webkit-fill-available; /* https://twitter.com/bfgeek/status/1262465912025698304 */
+}
+
+html, body {
+  min-height: 100%; /* We keep this right? */
+  min-height: 100vh;
+  min-height: -webkit-fill-available; /* We want the vendor-prefixed value to take affect
+                                         in browsers that support it, fall back to 100vh,
+                                         then 100%. */
 }
 
 .screen {
