@@ -6,7 +6,7 @@
 
 body {
   background-color: rgb(199, 206, 211);  
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
 }
 
@@ -15,13 +15,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  margin: auto;
+  height: calc(var(--vh, 1vh) * 100);
   transition: margin .5s ease-out;
 }
 .screen.up {
-  margin-top: -100vh;
+  margin-top: calc(var(--vh, 1vh) * -100);
 }
 
 /* Title Screen ------------------------------------------------------------------------------ */
