@@ -4,6 +4,8 @@ const timeEl = document.getElementById('time');
 const winTimeEl = document.getElementById('winTime')
 const screens = document.querySelectorAll('.screen')
 const startBtn = document.getElementById('start')
+const matchSound = new Audio('sound/match_sound.wav');
+const clickSound = new Audio('sound/click_sound.mp3')
 
 let hasFlippedCard = false
 let lockBoard = false
@@ -64,6 +66,7 @@ function checkForMatch() {
     //its a match
     disableCards()
     sum = sum + 1
+    matchSound.play()
   } else {
     //not a match
     unFlipCards()
