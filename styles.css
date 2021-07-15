@@ -71,11 +71,6 @@ body {
   margin-top: 20px;
   text-align: center;
 }
- /* @media (max-width: 575px) {
-  .functions {
-    flex-direction: column;
-  }
-} */
 
 #time {
   padding: 8px 15px;
