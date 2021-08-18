@@ -11,7 +11,7 @@ Complete
 ## Known Bug
 Game is not completely centered on all mobile devices.  I found this out close to finishing the project.  In the game, the first screen shows a start button and then you slide to a new screen with the game itself.  I wasn't able to find a work around where I could still keep this feature.  This seems to be a big problem on mobile devices and I will keep it in mind for future projects.
 
-Chanind explains the problem and some solutions really well!  Below is a link to his article, a picture and a quick explanation that I copied from his github.
+Chanind explains the problem and some solutions really well!  Below is a link to his article, a quick explanation and picture that I copied from his github.
 
 https://chanind.github.io/javascript/2019/09/28/avoid-100vh-on-mobile-web.html
 
