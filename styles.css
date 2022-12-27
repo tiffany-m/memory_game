@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* padding and border are included in the width and height */
 }
 
 body {
@@ -18,13 +17,16 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  transition: margin 0.5s ease-out;
+  width: 100vw;
+  transition: margin 1s ease-out;
 }
-
 .screen.up {
   margin-top: -100vh;
 }
 
+
+
+/* Title Screen ------------------------------------------------------------------------------ */
 .jumbotron {
   margin: auto;
   text-align: center;
@@ -35,20 +37,17 @@ body {
   font-family: 'Patrick Hand', cursive;
 }
 
- @media (max-width: 600px) {
-  .title {
-    font-size: 30px;
-  } 
-}
-
 .shiba {
   margin: 0 10px;
 }
 
-#reset, #start {
-  background-color: rgb(12, 213, 231);
-  display: flex;
+/* Buttons ----------------------------------------------------------------------------------- */
+#start {
   margin: 20px auto;
+  display: flex;
+}
+#start, #reset {
+  background-color: rgb(12, 213, 231);
   padding: 8px 15px;
   font-size: 25px;
   border: 2px solid black;
@@ -56,38 +55,18 @@ body {
   font-family: 'Patrick Hand', cursive;
   font-weight: bold;
 }
-
 #reset:active, #start {
   transform: scale(.97);
   background-color: rgb(11, 191, 207);
 }
 
+/* Game Board Screen ---------------------------------------------------------------------------- */
 .memory-game {
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
   /* part1: gives depth to elements for 3D effect */
 }
- /* @media (max-width: 600px) {
-  .memory-game {
-    width: 94%;
-  } 
-}
- @media (min-width: 601px) {
-  .memory-game {
-    width: 80%;
-  } 
-}
- @media (min-width: 768px) {
-  .memory-game {
-    width: 60%;
-  } 
-}
- @media (min-width: 992px) {
-  .memory-game {
-    width: 40%;
-  } 
-} */
  @media (min-width: 1200px) {
   .memory-game {
     width: 30%;
@@ -108,7 +87,6 @@ body {
   margin: 3px;
 }
 }
-
 .memory-card:after {
   content: "";
   display: block;
@@ -117,12 +95,10 @@ body {
 /* https://www.sodawebmedia.com/blog/create-responsive-square-css/
 By making use of the padding-top, we can create a perfect square, 
 also took away memory-game and memory-card height away to make responsive */
-
 .memory-card:active {
   transform: scale(.95);
   transition: transform .2s;
 }
-
 .memory-card.flip {
   transform: rotateY(180deg);
 }
@@ -136,7 +112,11 @@ also took away memory-game and memory-card height away to make responsive */
   backface-visibility: hidden;
 }  
 /* The backface-visibility property defines whether or not the back face of an element should be visible when facing the user.  The back face of an element is a mirror image of the front face being displayed. */
-
 .front-face {
   transform: rotateY(180deg);
+}
+
+.functions {
+  display: flex;
+  flex-wrap: wrap;
 }
