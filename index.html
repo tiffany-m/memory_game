@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="styles.css">
   <title>Flip Memory Game</title>
 </head>
 <body>
-  <div class="title">
+ <!-- Title -->   
+  <div class="jumbotron">
     <img src="img/shiba.png" class="shiba" width="70px" alt="happy shiba"> 
-    <h1>Shiba Memory Flip Card Game!</h1>
+    <div class="title">Memory Flip Card Game!</div>
   </div>
-
+ <!-- Game Board --> 
   <section class="memory-game">
     <div class="memory-card" data-image="bone"> <!-- data-* attribute allow us to store extra info that doesn't have visual representation-->
       <img class="front-face" src="img/bone.jpg" alt="shiba with bone">
@@ -85,6 +89,7 @@
       <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
     </div>
   </section>
+<!-- Reset Button -->  
   <button type="button" class="reset-button">Reset Game</button>
   <script src="scripts.js"></script>
 </body>
