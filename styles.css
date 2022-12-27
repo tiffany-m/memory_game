@@ -11,25 +11,31 @@ body {
 }
 
 .memory-game {
-  width: 640px;
-  height: 640px;  
+  width: 600px;
+  height: 450px;  
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid lime;
+  perspective: 1000px;
 }
 
 .memory-card {
   width: calc(25% - 10px);
-  height: calc(25% - 10px);
+  height: calc(33.33% - 10px);
   position: relative;
   margin: 5px;
   transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
 }
 
 .memory-card:active {
   transform: scale(.97);
   transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
 }
 
 .front-face, .back-face {
@@ -38,4 +44,10 @@ body {
   position: absolute;
   border-radius: 10px;
   border: 2px solid black;
+  backface-visibility: hidden;
+}  
+/* The backface-visibility property defines whether or not the back face of an element should be visible when facing the user.  The back face of an element is a mirror image of the front face being displayed. */
+
+.front-face {
+  transform: rotateY(180deg);
 }
