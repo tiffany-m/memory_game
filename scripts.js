@@ -5,7 +5,6 @@ const screens = document.querySelectorAll('.screen')
 const matchSound = new Audio('sound/match_sound.wav');
 
 let timeEl = document.getElementById('time');
-let winTimeEl = document.getElementById('winTime')
 
 let hasFlippedCard = false
 let lockBoard = false
@@ -101,7 +100,6 @@ function resetBoard() { // after each round of flipped cards must reset value to
 }
 
 function resetGame() {
-  winTimeEl.innerHTML = `Winning ${timeEl.innerHTML}`
   timeEl.innerHTML = `Time: 00:00`;
   cards.forEach(card => card.classList.remove('flip'))
   resetBoard()
