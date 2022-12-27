@@ -107,6 +107,7 @@ function resetGame() {
   cards.forEach(card => card.classList.remove('flip'))
   resetBoard()
   sum = 0
+  seconds = 0
     setTimeout(() => {
       shuffle()
     }, 1000);
