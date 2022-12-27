@@ -1,10 +1,11 @@
 const startBtn = document.getElementById('start')
 const resetBtn = document.getElementById('reset')
 const cards = document.querySelectorAll('.memory-card')
-const timeEl = document.getElementById('time');
-const winTimeEl = document.getElementById('winTime')
 const screens = document.querySelectorAll('.screen')
 const matchSound = new Audio('sound/match_sound.wav');
+
+let timeEl = document.getElementById('time');
+let winTimeEl = document.getElementById('winTime')
 
 let hasFlippedCard = false
 let lockBoard = false
