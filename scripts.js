@@ -11,13 +11,13 @@ let firstCard, secondCard
 let seconds = 0
 let sum = 0
 
-// start button transitions to next screen
+// start button transitions to next screen and starts game
 startBtn.addEventListener('click', () => {
   screens[0].classList.add('up')
-  setInterval(increaseTime, 1000)})
-// starts game
-shuffle()
-cards.forEach(card => card.addEventListener('click', flipCard))
+  setInterval(increaseTime, 1000)
+  shuffle()
+  cards.forEach(card => card.addEventListener('click', flipCard))
+})
 
 function increaseTime() {
   if(sum === 8) {
@@ -30,10 +30,6 @@ function increaseTime() {
   timeEl.innerHTML = `Time: ${m}:${s}`;
   seconds++;
   }
-}
-
-function stopTime() {
- clearInterval(increaseTime);
 }
 
 function shuffle() {
@@ -62,8 +58,7 @@ function flipCard() {
   }
 }
 
-function checkForMatch() {
-  
+function checkForMatch() {  
   //do cards match?
   if (firstCard.dataset.image === secondCard.dataset.image) {  // dataset lets you check data-* attribute, in this case the data-image
     //its a match
