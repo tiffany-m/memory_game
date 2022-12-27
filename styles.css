@@ -24,8 +24,6 @@ body {
   margin-top: -100vh;
 }
 
-
-
 /* Title Screen ------------------------------------------------------------------------------ */
 .jumbotron {
   margin: auto;
@@ -44,6 +42,9 @@ body {
 /* Buttons ----------------------------------------------------------------------------------- */
 #start {
   margin: 20px auto;
+}
+#reset {
+  margin: 0 20px;
 }
 #start, #reset {
   background-color: rgb(12, 213, 231);
@@ -127,6 +128,7 @@ also took away memory-game and memory-card height away to make responsive */
   border-radius: 5px;
   font-family: 'Patrick Hand', cursive;
   font-weight: bold;
+  margin: 0 20px;
 }
 
 #score {
