@@ -1,11 +1,10 @@
-const cards = document.querySelectorAll('.memory-card')
+const startBtn = document.getElementById('start')
 const resetBtn = document.getElementById('reset')
+const cards = document.querySelectorAll('.memory-card')
 const timeEl = document.getElementById('time');
 const winTimeEl = document.getElementById('winTime')
 const screens = document.querySelectorAll('.screen')
-const startBtn = document.getElementById('start')
 const matchSound = new Audio('sound/match_sound.wav');
-const clickSound = new Audio('sound/click_sound.mp3')
 
 let hasFlippedCard = false
 let lockBoard = false
@@ -71,6 +70,7 @@ function checkForMatch() {
     //not a match
     unFlipCards()
   }
+
 }
 
 function disableCards() {
@@ -88,7 +88,7 @@ function unFlipCards() {
     secondCard.classList.remove('flip');
 
     resetBoard()
-  }, 1500);
+  }, 1000);
 }
 
 function resetBoard() { // after each round of flipped cards must reset value to null
