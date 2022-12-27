@@ -10,88 +10,94 @@
   <title>Flip Memory Game</title>
 </head>
 <body>
- <!-- Title -->   
-  <div class="jumbotron">
-    <img src="img/shiba.png" class="shiba" width="70px" alt="happy shiba"> 
+ <!-- Title Screen -->
+  <div class="jumbotron screen">
+    <img src="img/shiba.png" class="shiba" width="125px" alt="happy shiba"> 
     <div class="title">Memory Flip Card Game!</div>
+    <button id="start">Start Game</button>
+  </div> 
+ <!-- Game Board Screen -->
+  <div class="screen">
+    <section class="memory-game">
+      <div class="memory-card" data-image="bone"> <!-- data-* attribute allow us to store extra info that doesn't have visual representation-->
+        <img class="front-face" src="img/bone.jpg" alt="shiba with bone">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+      <div class="memory-card" data-image="bone">
+        <img class="front-face" src="img/bone.jpg" alt="shiba with bone">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+      
+      <div class="memory-card" data-image="computer">
+        <img class="front-face" src="img/computer.jpg" alt="shiba on computer">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+      <div class="memory-card" data-image="computer">
+        <img class="front-face" src="img/computer.jpg" alt="shiba on computer">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern" >
+      </div>
+
+      <div class="memory-card" data-image="game">
+        <img class="front-face" src="img/game.jpg" alt="shiba playing video game">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+      <div class="memory-card" data-image="game">
+        <img class="front-face" src="img/game.jpg" alt="shiba playing video game">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+
+      <div class="memory-card" data-image="tea">
+        <img class="front-face" src="img/tea.jpg" alt="shiba drinking tea">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+      <div class="memory-card" data-image="tea">
+        <img class="front-face" src="img/tea.jpg" alt="shiba drinking tea">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+
+      <div class="memory-card" data-image="pizza">
+        <img class="front-face" src="img/pizza.jpg" alt="shiba eating pizza">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+      <div class="memory-card" data-image="pizza">
+        <img class="front-face" src="img/pizza.jpg" alt="shiba eating pizza">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+
+      <div class="memory-card" data-image="tub">
+        <img class="front-face" src="img/tub.jpg" alt="shiba taking bath">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+      <div class="memory-card" data-image="tub">
+        <img class="front-face" src="img/tub.jpg" alt="shiba taking bath">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+
+      <div class="memory-card" data-image="sushi">
+        <img class="front-face" src="img/sushi.jpg" alt="shiba eating sushi">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+      <div class="memory-card" data-image="sushi">
+        <img class="front-face" src="img/sushi.jpg" alt="shiba eating sushi">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+
+      <div class="memory-card" data-image="sit">
+        <img class="front-face" src="img/sit.jpg" alt="shiba sitting">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+      <div class="memory-card" data-image="sit">
+        <img class="front-face" src="img/sit.jpg" alt="shiba sitting">
+        <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
+      </div>
+    </section>
+<!-- Functions -->
+    <div class="functions">
+      <h3 id="time" class="time">Time: 00:00</h3>
+      <h3 id="score">Score: 0</h3>
+      <button type="button" id="reset">Reset Game</button>
+    </div>
   </div>
- <!-- Game Board --> 
-  <section class="memory-game">
-    <div class="memory-card" data-image="bone"> <!-- data-* attribute allow us to store extra info that doesn't have visual representation-->
-      <img class="front-face" src="img/bone.jpg" alt="shiba with bone">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-    <div class="memory-card" data-image="bone">
-      <img class="front-face" src="img/bone.jpg" alt="shiba with bone">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-    
-    <div class="memory-card" data-image="computer">
-      <img class="front-face" src="img/computer.jpg" alt="shiba on computer">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-    <div class="memory-card" data-image="computer">
-      <img class="front-face" src="img/computer.jpg" alt="shiba on computer">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern" >
-    </div>
-
-    <div class="memory-card" data-image="game">
-      <img class="front-face" src="img/game.jpg" alt="shiba playing video game">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-    <div class="memory-card" data-image="game">
-      <img class="front-face" src="img/game.jpg" alt="shiba playing video game">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-
-    <div class="memory-card" data-image="tea">
-      <img class="front-face" src="img/tea.jpg" alt="shiba drinking tea">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-    <div class="memory-card" data-image="tea">
-      <img class="front-face" src="img/tea.jpg" alt="shiba drinking tea">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-
-    <div class="memory-card" data-image="pizza">
-      <img class="front-face" src="img/pizza.jpg" alt="shiba eating pizza">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-    <div class="memory-card" data-image="pizza">
-      <img class="front-face" src="img/pizza.jpg" alt="shiba eating pizza">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-
-    <div class="memory-card" data-image="tub">
-      <img class="front-face" src="img/tub.jpg" alt="shiba taking bath">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-    <div class="memory-card" data-image="tub">
-      <img class="front-face" src="img/tub.jpg" alt="shiba taking bath">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-
-    <div class="memory-card" data-image="sushi">
-      <img class="front-face" src="img/sushi.jpg" alt="shiba eating sushi">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-    <div class="memory-card" data-image="sushi">
-      <img class="front-face" src="img/sushi.jpg" alt="shiba eating sushi">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-
-    <div class="memory-card" data-image="sit">
-      <img class="front-face" src="img/sit.jpg" alt="shiba sitting">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-    <div class="memory-card" data-image="sit">
-      <img class="front-face" src="img/sit.jpg" alt="shiba sitting">
-      <img class="back-face" src="img/paw.jpg" alt="paw print pattern">
-    </div>
-  </section>
-<!-- Reset Button -->  
-  <h3 id="time" class="time">Time: 00:00</h3>
-  <button type="button" class="reset-button">Reset Game</button>
   <script src="scripts.js"></script>
 </body>
 </html>

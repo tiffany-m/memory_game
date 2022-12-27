@@ -1,10 +1,19 @@
 const cards = document.querySelectorAll('.memory-card')
-const resetButton = document.querySelector('.reset-button')
+const resetButton = document.getElementById('reset')
 const timeEl = document.getElementById('time');
+const scoreEl = document.getElementById('score')
+const screens = document.querySelectorAll('.screen')
+const startBtn = document.getElementById('start')
 
 let hasFlippedCard = false
 let lockBoard = false
 let firstCard, secondCard
+
+// start button transitions to next screen
+startBtn.addEventListener('click', () => screens[0].classList.add('up'))
+// starts game
+shuffle()
+cards.forEach(card => card.addEventListener('click', flipCard))
 
 function shuffle() {
   cards.forEach(card => {
@@ -80,6 +89,3 @@ function resetGame() {
 
 resetButton.addEventListener('click', resetGame)
 
-// starts game
-shuffle()
-cards.forEach(card => card.addEventListener('click', flipCard))
