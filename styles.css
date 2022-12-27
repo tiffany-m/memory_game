@@ -16,9 +16,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  transition: margin 1s ease-out;
+  min-height: 100vh;
+  min-width: 100vw;
+  transition: margin .5s ease-out;
 }
 .screen.up {
   margin-top: -100vh;
@@ -72,7 +72,11 @@ body {
   margin-top: 20px;
   text-align: center;
 }
-
+ @media (max-width: 575px) {
+  .functions {
+    flex-direction: column;
+  }
+}
 
 #winTime, #time {
   padding: 8px 15px;
