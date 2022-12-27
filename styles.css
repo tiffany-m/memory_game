@@ -49,5 +49,5 @@ body {
 /* The backface-visibility property defines whether or not the back face of an element should be visible when facing the user.  The back face of an element is a mirror image of the front face being displayed. */
 
 .front-face {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg)
 }
