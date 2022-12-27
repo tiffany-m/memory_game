@@ -18,6 +18,5 @@ https://chanind.github.io/javascript/2019/09/28/avoid-100vh-on-mobile-web.html
 "The core issue is that mobile browsers (I’m looking at you, Chrome and Safari) have a “helpful” feature where the address bar is sometimes visible and sometimes hidden, changing the visible size of the viewport. Rather than adjusting the height of 100vh to be the visible portion of the screen as the viewport height changes, these browsers instead have 100vh set to the height of the browser with address the address bar hidden. The result is that the bottom portion of the screen will be cut off when the address bar is visible, thus defeating the purpose of 100vh to begin with."
 
 ![Image showing example of why 100vh doesn't work.](https://chanind.github.io/assets/100vh_problem.png)
-
 ## Motivation
 Just wanted to make a fun project to practice styling and JavaScript logic.
