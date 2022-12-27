@@ -11,11 +11,12 @@ let firstCard, secondCard
 let seconds = 0
 let sum = 0
 
-window.addEventListener('resize', () => {
-  document
-    .querySelector(':root')
-    .style.setProperty('--vh', window.innerHeight / 100 + 'px');
-});
+const appHeight = () => {
+  const doc = document.documentElement;
+  doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+};
+window.addEventListener('resize', appHeight);
+appHeight();
 
 // start button transitions to next screen and starts game
 startBtn.addEventListener('click', () => {
