@@ -8,7 +8,6 @@ body {
   background-color: rgb(199, 206, 211);  
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 100vh;
 }
 
@@ -54,17 +53,17 @@ body {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   perspective: 1000px;
 }
-
  @media (max-width: 600px) {
   .memory-game {
-    width: 90%;
+    width: 94%;
   } 
 }
  @media (min-width: 601px) {
   .memory-game {
-    width: 70%;
+    width: 80%;
   } 
 }
  @media (min-width: 768px) {
@@ -90,6 +89,11 @@ body {
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
+}
+ @media (max-width: 601px) {
+.memory-card {
+  margin: 3px;
+}
 }
 
 .memory-card:after {
