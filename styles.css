@@ -5,17 +5,52 @@
 }
 
 body {
-  height: 100vh;
   display: flex;
   background-color: lightgray;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
 .memory-game {
-  width: 600px; 
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
+}
+
+ @media (max-width: 600px) {
+  .memory-game {
+    width: 90%;
+  } 
+}
+
+ @media (min-width: 601px) {
+  .memory-game {
+    width: 70%;
+  } 
+}
+
+ @media (min-width: 768px) {
+  .memory-game {
+    width: 60%;
+  } 
+}
+
+ @media (min-width: 992px) {
+  .memory-game {
+    width: 40%;
+  } 
+}
+
+ @media (min-width: 1200px) {
+  .memory-game {
+    width: 35%;
+  } 
 }
 
 .memory-card {

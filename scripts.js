@@ -63,7 +63,7 @@ function resetBoard() {
 // wrapping function in () followed by () makes it an immediately invoked function expression, so it will be executed right after its definition
 (function shuffle() {
   cards.forEach(card => {
-    let randomPos = Math.floor(Math.random() * 12) // generates random numbers from 0 to 11
+    let randomPos = Math.floor(Math.random() * 14) // generates random numbers from 0 to 11
     card.style.order = randomPos // order is flex box property, each flex item defaults to 0, giving each item new number sorts them in ascending order
   })
 })()
