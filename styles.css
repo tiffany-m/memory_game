@@ -41,10 +41,6 @@ body {
   } 
 }
 
-.shiba {
-  margin-bottom: 10px;
-}
-
 /* Buttons/Functions ----------------------------------------------------------------------------------- */
 #start {
   margin-top: 25px;
@@ -80,8 +76,6 @@ body {
   font-family: 'Patrick Hand', cursive;
   font-weight: bold;
   margin: 5px;
-}
-#time {
   background-color: #13FBDC;
 }
 
@@ -91,7 +85,7 @@ body {
   flex-wrap: wrap;
   perspective: 1000px;
   justify-content: center;
-  /* part1: gives depth to elements for 3D effect */
+  /* part1: gives depth to elements for 3D effect, see below comment */
 }
  @media (max-width: 575px) {
   .memory-game {
